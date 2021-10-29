@@ -8,7 +8,11 @@ public class User {
     private String password;
     private String salt;
     private String email;
-
+    private int type;
+    private int status;
+    private String activationCode;
+    private String headerUrl;
+    private Date createTime;
     @Override
     public String toString() {
         return "User{" +
@@ -25,8 +29,6 @@ public class User {
                 '}';
     }
 
-    private int type;
-    private int status;
 
     public int getId() {
         return id;
@@ -100,7 +102,7 @@ public class User {
         this.headerUrl = headerUrl;
     }
 
-    public Date getCreateTime() {
+    public Date getCreateTime(Date date) {
         return createTime;
     }
 
@@ -108,7 +110,4 @@ public class User {
         this.createTime = createTime;
     }
 
-    private String activationCode;
-    private String headerUrl;
-    private Date createTime;
 }

@@ -1,7 +1,9 @@
 package com.newcoder.community.dao;
 
 import com.newcoder.community.entity.User;
+import org.apache.ibatis.annotations.Mapper;
 
+@Mapper
 public interface UserMapper {
     User selectById(int id);
 
@@ -13,7 +15,7 @@ public interface UserMapper {
 
     int updateStatus(int id,int status);
 
-    int updeateHeader(int id,int headerUrl);
+    int updateHeader(int id,String headerUrl);
 
     int updatePassword(int id,String password);
 }
